@@ -1,3 +1,10 @@
+<?php
+  include 'assets/php/connection.php';
+
+  $query = "SELECT * FROM tbl_sample ORDER BY  id DESC";
+
+  $result = $connect->query($quey);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +20,22 @@
 
 </head>
 <body>
- Hola Mundo :D!!!
+  <div class="container">
+    <h1 classmt-5 mb-5 text-center text-primary>Edicion en Linea con JavaScript</h1>
+    <div class="card">
+      <div class="card-header">Data</div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table classtable table-striped table-bordered>
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Genero</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
