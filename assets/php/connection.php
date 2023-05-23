@@ -1,3 +1,3 @@
 <?php
-  $connect = new PDO("mysql:host=localhost; dbname=testing", "root", "");
+  $connect = new PDO("mysql:host=localhost; dbname=edicion_en_linea", "root", "");
 ?>

@@ -3,7 +3,7 @@
 
   $query = "SELECT * FROM tbl_sample ORDER BY  id DESC";
 
-  $result = $connect->query($quey);
+  $result = $connect->query($query);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,11 +26,20 @@
       <div class="card-header">Data</div>
       <div class="card-body">
         <div class="table-responsive">
-          <table classtable table-striped table-bordered>
+          <table class="table table-striped table-bordered">
             <tr>
               <th>Nombre</th>
               <th>Apellido</th>
               <th>Genero</th>
+              <?php
+                foreach($result as $row){
+                  echo'<tr>
+                        <td><a href="#">'.$row["first_name"].'</td>
+                        <td><a href="#">'.$row["last_name"].'</td>
+                        <td><a href="#">'.$row["gender"].'</td>
+                      </tr>';
+                }
+              ?>
             </tr>
           </table>
         </div>
