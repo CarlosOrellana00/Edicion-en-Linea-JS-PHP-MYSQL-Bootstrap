@@ -7,6 +7,6 @@
 
     $connect->query($query);
 
-    echo 'done';
+    echo 'listo';
   }
 ?>
